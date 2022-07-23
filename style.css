@@ -1,0 +1,89 @@
+/* CSS reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --content: #114;
+    --bg: #aaf;
+    --accent: gold;
+}
+
+/* Fixed width container class that will "auto-center" itself */
+.container {
+    width: 800px;
+    margin: 0 auto;
+    background-color: #ddd;
+}
+
+.card {
+    border: 2px double #333;
+    border-radius: 1em;
+}
+
+/* Flex classes */
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+    min-height: 20px;
+    width: 100%;
+    background-color: #faa;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    min-height: 20px;
+    width: 100%;
+    background-color: #aaf;
+}
+
+/* Utility classes */
+.bold {
+    font-weight: bold;
+}
+
+.em {
+    font-style: italic;
+}
+
+.pad {
+    padding: 1em;
+}
+
+.small {
+    font-size: small;
+}
+
+.rad {
+    border-radius: 12px;
+}
+
+/* Anatomical classes */
+main.row {
+    align-items: flex-start;
+    background-color: var(--bg);
+}
+
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 1;
+}
+
+.stats {
+    flex: 1;
+}
+
+.def {
+    flex: 3;
+}
