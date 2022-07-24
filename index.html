@@ -6,39 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./assets/cd_favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Dojonary</title>
 </head>
 <body class="container">
     <nav class="row pad">
-        <h1 class="title">Dojonary</h1>
-        <input type="text" name="search" id="search" value="Search">
-        <button class="blueb">Login</button>
+        <div class="title">
+            <h1>Dojonary</h1>
+            <i class="fa-solid fa-book-bookmark"></i>
+        </div>
+        <input type="text" name="search" id="search" placeholder="What'll it be?" class="pad">
+        <button id="login" class="bold" onclick="log(this)">Login</button>
     </nav>
     <main class="row">
-        <div class="left col">
-            <div class="row card">
+        <div id="defs" class="left col">
+            <div class="row card" id="def0">
                 <div class="col stats">
                     <h2>ninja</h2>
                     <p class="em">noun</p>
                     <p class="small">Plural: <em>ninjas</em></p>
-                    <button class="yellowb">13 likes</button>
+                    <button onclick="increment(likes0)" class="yellowb bold"><span id="likes0">13</span> likes</button>
                 </div>
-                <p class="def">A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
+                <p class="def pad">A practitioner skilled in the <a href="#">Japanese</a> art of <a href="#">ninjutsu</a></p>
             </div>
-            <div class="row rad">
+            <div class="row card" id="def1">
                 <div class="col stats">
                     <h2>ninja</h2>
                     <p class="em">noun</p>
                     <p class="small">Plural: <em>ninjas</em></p>
-                    <button class="yellowb">13 likes</button>
+                    <button onclick="increment(likes1)" class="yellowb bold"><span id="likes1">37</span> likes</button>
                 </div>
-                <p class="def">A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
+                <p class="def pad">A <a href="#">programmer</a> who breaks down problems with <a href="#">zen</a>-like focus</p>
             </div>
         </div>
-        <div class="right col">
-            <div class="col card">
+        <div class="right col rad">
+            <div class="col card rad pad">
                 <h4>Dojonary is defined by <strong>YOU</strong></h4>
-                <button class="greenb">Add Definition</button>
+                <input type="text" name="definition" id="definition" placeholder="  A ninja is...">
+                <button onclick="addDef(definition)" class="greenb" id="addDef">Add Definition</button>
             </div>
         </div>
     </main>
